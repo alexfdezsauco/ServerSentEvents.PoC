@@ -11,19 +11,19 @@
         </div>
 
         <script type="text/javascript">
-            var source = new EventSource('notifications-hub');
+            var source = new EventSource("notifications-hub");
 
             source.onmessage = function (event) {
-                console.log('Message Received: ' + event.data);
-                document.getElementById("notifications").innerHTML += event.data + "<br>";
+                console.log("Message Received: " + event.data);
+                document.getElementById("notifications").innerHTML += "Received: " + event.data + "<br>";
             };
 
             source.onopen = function (event) {
-                console.log('Connection Open');
+                console.log("Connection Open");
             };
 
             source.onerror = function (event) {
-                console.log('Error');
+                console.log("Error");
             };
         </script>
     </body>
